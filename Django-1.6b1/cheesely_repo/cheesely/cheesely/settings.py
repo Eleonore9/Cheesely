@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Handles database migrations
+    'south',
     'cheeses',
 )
 
@@ -90,3 +92,11 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+# User-oploaded media files
+
+# Defines the base URL for uploaded files
+MEDIA_URL = '/media/'
+
+# Defines which local directory the files are to be uploaded into
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

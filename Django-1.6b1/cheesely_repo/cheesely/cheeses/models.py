@@ -18,6 +18,14 @@ class Cheese(models.Model):
                 null=True)
     firmness = models.IntegerField("Firmness", max_length=20,
                 choices=FIRMNESS_CHOICES, null=True, blank=True)
+    country_of_origin = models.CharField("Country of Origin",
+                            max_length=255, blank=True, null=True)
+    region_of_origin = models.CharField("Region of Origin",
+                            max_length=255, blank=True, null=True)
+    photo = models.ImageField("Photo", upload_to="cheeses",
+                                        blank=True, default="")
+    photo_attribution = models.URLField("Photo Attribution",
+                        max_length=255, blank=True, default="")
 
     def __unicode__(self): 
         # To display the actual name 
