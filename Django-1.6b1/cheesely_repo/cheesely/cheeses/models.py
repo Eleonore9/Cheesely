@@ -31,3 +31,6 @@ class Cheese(models.Model):
         # To display the actual name 
         # and not "Cheese object"
         return self.name
+
+    def __str__(self):
+        return self.name

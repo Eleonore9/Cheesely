@@ -5,7 +5,7 @@ from .models import Cheese
 # Create your views here.
 class CheeseListView(ListView):
 	model = Cheese
-	template_name = 'chesses/cheese_list.html'
+	template_name = 'cheeses/cheese_list.html'
 
 class CheeseDetailView(DetailView):
     model = Cheese
