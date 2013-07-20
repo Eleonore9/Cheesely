@@ -23,14 +23,12 @@ class Cheese(models.Model):
     region_of_origin = models.CharField("Region of Origin",
                             max_length=255, blank=True, null=True)
     photo = models.ImageField("Photo", upload_to="cheeses",
-                                        blank=True, default="")
+                                        blank=True, default="") 
     photo_attribution = models.URLField("Photo Attribution",
-                        max_length=255, blank=True, default="")
+		    max_length=255, blank=True, default="")
 
     def __unicode__(self): 
         # To display the actual name 
         # and not "Cheese object"
         return self.name
 
-    def __str__(self):
-        return self.name
