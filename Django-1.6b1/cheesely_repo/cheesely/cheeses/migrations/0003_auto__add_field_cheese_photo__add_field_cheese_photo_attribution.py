@@ -10,12 +10,12 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'Cheese.photo'
         db.add_column(u'cheeses_cheese', 'photo',
-                      self.gf('django.db.models.fields.files.ImageField')(default='', max_length=100, blank=True),
+                      self.gf('django.db.models.fields.files.ImageField')(default='', max_length=100, null=True, blank=True),
                       keep_default=False)
 
         # Adding field 'Cheese.photo_attribution'
         db.add_column(u'cheeses_cheese', 'photo_attribution',
-                      self.gf('django.db.models.fields.URLField')(default='', max_length=255, blank=True),
+			self.gf('django.db.models.fields.URLField')(default='', max_length=255, null=True, blank=True),
                       keep_default=False)
 
 
@@ -35,8 +35,8 @@ class Migration(SchemaMigration):
             'firmness': ('django.db.models.fields.IntegerField', [], {'max_length': '20', 'null': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'photo': ('django.db.models.fields.files.ImageField', [], {'default': "''", 'max_length': '100', 'blank': 'True'}),
-            'photo_attribution': ('django.db.models.fields.URLField', [], {'default': "''", 'max_length': '255', 'blank': 'True'}),
+            'photo': ('django.db.models.fields.files.ImageField', [], {'default': "''", 'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'photo_attribution': ('django.db.models.fields.URLField', [], {'default': "''", 'max_length': '255', 'null': 'True', 'blank': 'True'}),
             'region_of_origin': ('django.db.models.fields.CharField', [], {'max_length': '255', 'null': 'True', 'blank': 'True'})
         }
     }

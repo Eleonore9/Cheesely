@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     # Handles database migrations
     'south',
     'cheeses',
+    # Handles user registration
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +102,6 @@ MEDIA_URL = '/media/'
 
 # Defines which local directory the files are to be uploaded into
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Registration is open!
+REGISTRATION_OPEN = True
