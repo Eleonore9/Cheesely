@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     # Handles database migrations
     'south',
     'cheeses',
+    # Custom users app
+    'users',
     # Handles user registration
     'registration',
     # Handles user registration themes
@@ -109,3 +111,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Registration is open!
 REGISTRATION_OPEN = True
+
+# Select the correct user model
+AUTH_USER_MODEL = "users.User"

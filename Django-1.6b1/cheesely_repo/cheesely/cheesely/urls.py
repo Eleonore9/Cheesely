@@ -19,6 +19,7 @@ urlpatterns = patterns('',
         TemplateView.as_view(template_name='home.html'),
         name='home'),
     url(r'^cheeses/', include('cheeses.urls', namespace="cheeses")),
-    url(r'^accounts/', include('registration.backends.simple.urls',),)
+    url(r'^accounts/', include('registration.backends.simple.urls',),),
+    url(r'^users/', include('users.urls', namespace="users")),
 
-    ) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
