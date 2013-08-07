@@ -41,6 +41,10 @@ INSTALLED_APPS = (
     'cheeses',
     # Handles user registration
     'registration',
+    # Handles user registration themes
+    'registration_bootstrap',
+    # Improves django from layouts
+    'crispy_forms'
 )
 
 MIDDLEWARE_CLASSES = (
