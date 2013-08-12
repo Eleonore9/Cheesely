@@ -114,3 +114,17 @@ REGISTRATION_OPEN = True
 
 # Select the correct user model
 AUTH_USER_MODEL = "users.User"
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+	# default context processors, also need to be in there,
+	"django.contrib.auth.context_processors.auth",
+	"django.core.context_processors.debug",
+	"django.core.context_processors.il8n",
+	"django.core.context_processors.media",
+	"django.core.context_processors.static",
+	"django.core.context_processors.tz",
+	"django.contrib.messages.context_processors.messages",
+
+	# Add in the user's request to every template
+	"django.core.context_processors.request",
+)
