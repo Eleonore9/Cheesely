@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     # Handles user registration themes
     'registration_bootstrap',
     # Improves django from layouts
-    'crispy_forms'
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (

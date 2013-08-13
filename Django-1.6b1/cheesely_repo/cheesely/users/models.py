@@ -1,4 +1,3 @@
-from django.db import models
 # Import the AbstractUser model
 from django.contrib.auth.models import AbstractUser
 # Import the basic Django ORM models library

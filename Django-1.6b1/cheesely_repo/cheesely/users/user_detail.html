@@ -9,7 +9,7 @@
 	<h2>{{ user.username }}</h2>
 	<p>{{ user.tagline }}</p>
 	{% if request.user == user %}
-	    <p><a href="#">edit</a></p>
+	<p><a href="{% url 'users:update' %}">edit</a></p>
 	{% endif %}
     </div>
 </div>

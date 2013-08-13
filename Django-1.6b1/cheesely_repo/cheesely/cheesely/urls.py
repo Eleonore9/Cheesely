@@ -22,4 +22,4 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.simple.urls',),),
     url(r'^users/', include('users.urls', namespace="users")),
 
-) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
