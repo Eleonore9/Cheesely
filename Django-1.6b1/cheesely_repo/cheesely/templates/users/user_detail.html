@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}User: {{ user.username }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+     <div class="small-4 columns">
+	<h2>{{ user.username }}</h2>
+	<p>{{ user.tagline }}</p>
+	{% if request.user == user %}
+	<p><a href="{% url 'users:update' %}">edit</a></p>
+	{% endif %}
+    </div>
+</div>
+{% endblock content %}

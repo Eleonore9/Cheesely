@@ -119,7 +119,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 	# default context processors, also need to be in there,
 	"django.contrib.auth.context_processors.auth",
 	"django.core.context_processors.debug",
-	"django.core.context_processors.il8n",
+	"django.core.context_processors.i18n",
 	"django.core.context_processors.media",
 	"django.core.context_processors.static",
 	"django.core.context_processors.tz",
