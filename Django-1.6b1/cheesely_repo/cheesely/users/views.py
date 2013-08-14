@@ -24,3 +24,20 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
     def get_object(self):
 	    # only get the User record for the user making the request
 	    return User.objects.get(username=self.request.user.username)
+
+# ... snip the above
+# Only authenticated users can access views using this.
+from braces.views import LoginRequiredMixin
+
+# Import the form from users/forms.py
+from .forms import UserForm
+
+class UserUpdateView(LoginRequiredMixin, UpdateView):
+
+    # Use the custom form to constrain displayed fields
+    form_class = UserForm
+
+    # we already imported User in the view code above, remember?
+    model = User
+
+    # snip the rest for the sake of brevity
