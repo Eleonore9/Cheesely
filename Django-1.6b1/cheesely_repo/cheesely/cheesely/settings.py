@@ -71,6 +71,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
+    # Added MySQL db, only on branch MySQLdb
     'mysqldb': {
 	    'ENGINE': 'django.db.backends.mysql',
 	    'NAME': 'mysqldb',
