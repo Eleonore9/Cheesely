@@ -6,9 +6,9 @@ def run():
         if Table is not None:
 	    table_objects = Table.objects.all()
 	    for i in table_objects:
-	        i.save(using='mysqldb')
+	        i.save(using='postgresql')
 					      
-    ContentType.objects.using('mysqldb').all().delete()
+    ContentType.objects.using('postgresql').all().delete()
 
     for i in ContentType.objects.all():
         do(i.model_class())

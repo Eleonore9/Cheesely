@@ -71,9 +71,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'mysqldb': {
-	    'ENGINE': 'django.db.backends.mysql',
-	    'NAME': 'mysqldb',
+    'postgresql': {
+	    'ENGINE': 'postgresql_psycopg2',
+	    'NAME': 'cheesely',
+	    'USER': 'eleonore',
+	    'HOST': '',
+	    'PORT': '',
     }
 }	    
 
