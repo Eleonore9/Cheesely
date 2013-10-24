@@ -1,0 +1,4 @@
+*.pyc
+.virtualenvs/
+*.py~
+.*.*.swp

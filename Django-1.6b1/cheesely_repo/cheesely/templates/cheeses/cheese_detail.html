@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Cheeses: {{ cheese.name }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="span6">
+        <h2>{{ cheese.name }}</h2>
+        {% if cheese.description %}
+            <p>{{ cheese.description }}</p>
+        {% endif %}
+
+        {% if cheese.firmness %}
+            <p>Firmness: {{ cheese.get_firmness_display }}</p>
+        {% endif %}
+        
+        {% if cheese.country_of_origin or cheese.region_of_origin %}
+		    <h4>Origin</h4>
+
+		    {% if cheese.country_of_origin %}
+		        <p>Country: {{ cheese.country_of_origin }}</p>
+		    {% endif %}
+
+		    {% if cheese.region_of_origin %}
+		        <p>Region: {{ cheese.region_of_origin }}</p>
+		    {% endif %}
+
+		{% endif %}
+    </div>
+    <div class="span">
+	{% if cheese.photo %}
+	    <img class="img-polaroid" src="{{ cheese.photo.url }}" />
+	{% endif %} <br>
+	{% if cheese.photo_attribution %}
+	    <small><a href="{{ cheese.photo_attribution }}">{{ cheese.photo_attribution }}</a></small>
+	{% endif %}
+    </div>
+</div>
+{% endblock content %}
+
