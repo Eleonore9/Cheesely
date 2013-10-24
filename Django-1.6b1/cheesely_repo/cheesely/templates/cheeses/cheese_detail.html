@@ -5,10 +5,28 @@
 {% block content %}
 
 <div class="row">
+	<div class=navigation>
+		<div class=back>
+			{% if cheese.id > 1 %}
+			<a href="{% url 'cheeses:detail' cheese.pk %}">
+				    Previous
+			    </a>
+			{% endif %}
+		</div>
+		<a href="{% url 'cheeses:list' %}">Back to Cheese list
+		</a>
+		<div class=next>
+			<!--{% if cheese.id  %}
+				Next
+				{% endif %}-->
+		</div>
+	</div>
     <div class="span6">
         <h2>{{ cheese.name }}</h2>
         {% if cheese.description %}
-            <p>{{ cheese.description }}</p>
+	<div class="description"> 
+		<p>{{ cheese.description }}</p>
+	</div>
         {% endif %}
 
         {% if cheese.firmness %}

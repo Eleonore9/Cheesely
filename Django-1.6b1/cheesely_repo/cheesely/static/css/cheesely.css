@@ -1,5 +1,63 @@
+/* Images in the "Cheeses detail" */
 .img-polaroid {
 	width: 200px;
 	height: 150px;
 	margin-top: 80px;
-}       
+	margin-left: 80px;
+}
+/* Image on front page */
+.cheese_pic img{
+	display: block;
+	width: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20%;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+.cheese_pic p {
+	text-align: center;
+}
+/* Text content */
+.row {
+	margin-top: 100px;
+	text-align: center;
+}
+.sub_row {
+	margin-top: 60px;
+}
+/* Pages background */
+body {
+	background-image:url('/static/img/subtle_surface/subtle_surface.png');
+}
+.row {
+	background-image:url('/static/img/snow/snow.png');
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 0;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	box-shadow: 5px 5px 2px #888888;
+	-webkit-box-shadow: 5px 5px 2px #888888;
+	-moz-box-shadow: 5px 5px 2px #888888;
+	margin-left: 10px;
+}
+.navbar {
+	box-shadow: 5px 5px 2px #888888;
+	-webkit-box-shadow: 5px 5px 2px #888888;
+	-moz-box-shadow: 5px 5px 2px #888888;
+}
+.navbar-inner {
+	background-image:url('/static/img/snow/snow.png');
+}
+.description {
+	text-align: left;
+	background-color: #DCE0EF;
+	padding: 5px;
+	opacity: 0.9;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
